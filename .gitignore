@@ -1,1 +1,6 @@
 .idea
+node_modules
+
+# Dest assets folders
+public/css
+public/js

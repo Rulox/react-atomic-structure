@@ -1,0 +1,40 @@
+{
+  "name": "react-atomic-structure",
+  "version": "1.0.0",
+  "description": "Basic Structure for React app following Atomic Design",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rulox/react-atomic-structure.git"
+  },
+  "keywords": [
+    "react",
+    "atomic",
+    "design",
+    "sass"
+  ],
+  "author": "Raul Marrero (https://github.com/Rulox/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Rulox/react-atomic-structure/issues"
+  },
+  "homepage": "https://github.com/Rulox/react-atomic-structure#readme",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "react": "^15.3.1",
+    "react-dom": "^15.3.1"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.14.0",
+    "babel-preset-react": "^6.11.1",
+    "babel-preset-stage-0": "^6.5.0",
+    "babelify": "^7.3.0",
+    "browser-sync": "^2.14.0",
+    "browserify": "^13.1.0",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-browserify": "^0.5.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-sass": "^2.3.2"
+  }
+}
