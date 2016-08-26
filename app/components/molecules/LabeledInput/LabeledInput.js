@@ -11,7 +11,7 @@ export default class LabeledInput extends React.Component {
         return(
             <div className="m__labeled_input">
                 <Label text={this.props.label}/>
-                <Input value={this.props.placeholder} type="text"/>
+                <Input value="" placeholder={this.props.placeholder} type="text"/>
             </div>
         )
     }

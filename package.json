@@ -2,7 +2,9 @@
   "name": "react-atomic-structure",
   "version": "1.0.0",
   "description": "Basic Structure for React app following Atomic Design",
-  "scripts": {},
+  "scripts": {
+    "start": "gulp"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Rulox/react-atomic-structure.git"

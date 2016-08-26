@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
+import Title from './components/atoms/Title/Title';
 import Home from './components/templates/Home/Home';
 
 class App extends React.Component {
@@ -11,7 +12,10 @@ class App extends React.Component {
     render() {
         // Note: You can use here react-router to render all your templates from this main App component.
         return (
-            <Home/>
+            <div>
+                <Title text="Basic React App"/>
+                <Home/>
+            </div>
         )
     }
 }

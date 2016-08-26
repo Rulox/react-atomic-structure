@@ -84,7 +84,12 @@ WIP
 ## NPM Scripts
 This project comes with the following scripts to help you.
 
-WIP
+```bash
+npm run start
+```
+1. Create CSS and JS bundles from Sass and JS.
+2. Launch a browsersync web server and open default browser.
+3. Launch watchers on JS/CSS files.
 
 ## Contributions
 Feel free to create a pull request or create an issue to add features or fix bugs.
