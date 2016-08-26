@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import Title from './components/atoms/Title/Title.js';
+import Home from './components/templates/Home/Home';
 
 class App extends React.Component {
     constructor(props) {
@@ -9,11 +9,9 @@ class App extends React.Component {
     }
 
     render() {
-        // Note: You can use here react-router to render all your templates from the same component.
+        // Note: You can use here react-router to render all your templates from this main App component.
         return (
-            <div>
-
-            </div>
+            <Home/>
         )
     }
 }

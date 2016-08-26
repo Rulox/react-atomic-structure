@@ -1,0 +1,12 @@
+.o__article {
+  display: inline-block;
+  margin-left: 50px;
+  width: 300px;
+  background-color: #f7f3f3;
+
+  .article_featured {
+    display: block;
+    margin: 0 auto;
+    max-height: 200px;
+  }
+}

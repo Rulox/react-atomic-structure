@@ -8,7 +8,7 @@ const Title = (props) => {
 };
 
 Title.propTypes = {
-    text: React.PropTypes.string.isRequired,
+    text: React.PropTypes.string.isRequired
 };
 
 export default Title;
