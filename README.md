@@ -23,6 +23,7 @@ web server in your machine that automatically updates the code and the styles wh
 ## TODO List
 * Sass Lint
 * JS Lint
+* Mixin to pass additional classnames to components
 * Add components
 * Tests
 * Production build (minification, etc)
@@ -69,8 +70,6 @@ them in order to do your own app!
 #### Molecules
 * Labeled input
 * Content
-* User Avatar
-* Comment
 
 #### Organisms
 * Article
