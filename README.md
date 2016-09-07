@@ -31,11 +31,20 @@ web server in your machine that automatically updates the code and the styles wh
 * Add react-redux ?
 
 ## Requirements
-nodejs v5.*
-npm v3.*
+* nodejs v5.*
+* npm v3.*
 
 
 ## Getting started
+
+[Download the master branch](https://github.com/Rulox/react-atomic-structure/archive/master.zip)
+
+**or**
+
+Clone this repo (Be sure you delete the .git file, or move the files to your own project folder/repository)
+```bash
+git clone -b master --single-branch --depth 1 git@github.com:Rulox/react-atomic-structure.git
+```
 
 ##### Install Gulp globally
 ```bash
@@ -51,6 +60,7 @@ npm install
 ```bash
 npm run start 
 ```
+A browser window should open, if not, open it manually and go to http://localhost:3000/ (or any other URL+PORT that your terminal says). You can start working right now in the code, and all the changes will be visible in the browser just opened.
 
 ## Predefined components
 But first, [What is Atomic Design?](http://bradfrost.com/blog/post/atomic-web-design/)
