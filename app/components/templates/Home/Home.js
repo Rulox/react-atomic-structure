@@ -24,7 +24,7 @@ export default class Home extends React.Component {
 
                 <hr/>
 
-                <Title text="Example of an Atomic FOrm"/>
+                <Title text="Example of an Atomic Form"/>
                 <Form fields={this.props.form} buttonText="Submit"/>
             </div>
         )
