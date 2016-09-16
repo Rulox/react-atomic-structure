@@ -6,6 +6,7 @@ import Title from './components/atoms/Title/Title';
 import Nav from './components/organisms/Nav/Nav';
 import Home from './components/templates/Home/Home';
 import Main from './components/templates/Main/Main';
+import About from './components/templates/About/About';
 
 class App extends React.Component {
     constructor(props) {
@@ -18,7 +19,7 @@ class App extends React.Component {
           <Router history={browserHistory}>
             <Route path="/" component={Main}>
               <IndexRoute component={Home} />
-              <Route path="/about" />
+              <Route path="/about" component={About}/>
             </Route>
           </Router>
         )
