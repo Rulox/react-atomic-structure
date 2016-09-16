@@ -1,15 +1,12 @@
 .o__nav {
-  display: flex;
-  width: 100%;
 
   ul {
     display: flex;
-    width: 100%;
     justify-content: space-between;
   }
 
   li {
-    display: inline;
+    display: inline-block;
     width: 100%;
     padding: 15px;
 
@@ -17,17 +14,7 @@
     text-align: center;
     font-size: 1.4em;
     font-family: monospace;
-    border: 2px solid black;
-    border-left: 0;
+    border: 1px solid black;
     color: black;
-
-    &:last-of-type {
-      border-right: 0;
-    }
-
-    &:hover {
-      background-color: grey;
-      font-size: 1.6em;
-    }
   }
 }
