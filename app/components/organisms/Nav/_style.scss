@@ -16,5 +16,14 @@
     font-family: monospace;
     border: 1px solid black;
     color: black;
+
+    a {
+      display: block;
+      width: inherit;
+      height: inherit;
+
+      text-decoration: none;
+      color: black;
+    }
   }
 }

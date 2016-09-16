@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from '../../../components/atoms/Link/Link.js'
+import { Link } from 'react-router'
 
 export default class Nav extends React.Component {
   constructor(props) {
@@ -10,9 +10,9 @@ export default class Nav extends React.Component {
     return(
       <nav className="o__nav">
         <ul>
-          <li><Link href="/" text="Home" /></li>
-          <li><Link href="/about" text="About" /></li>
-          <li><Link href="/another-page" text="Another Page" /></li>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/about">About</Link></li>
+          <li><Link to="/another-page">Another Page</Link></li>
         </ul>
       </nav>
     )
