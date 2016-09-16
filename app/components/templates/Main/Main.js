@@ -12,10 +12,8 @@ export default class Main extends React.Component {
     return(
       <div className="app">
         <Nav />
-        
-        <main>
-          {this.props.children}
-        </main>
+      
+        {this.props.children}
       </div>
     )
   }
