@@ -1,0 +1,18 @@
+{
+  "env": {
+    "node": true
+  },
+  "parserOptions": {
+      "ecmaVersion": 7,
+      "sourceType": "module",
+      "ecmaFeatures": {
+          "jsx": true,
+      }
+  },
+  "globals": {},
+  "plugins": [],
+
+  "rules": {
+    "no-reserved-keys": 0,
+  },
+}

@@ -1,13 +1,14 @@
 var gulp         = require('gulp');
+var eslint       = require('gulp-eslint');
 var browserSync  = require('browser-sync').create();
 var sass         = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var notify       = require('gulp-notify');
 var babelify     = require('babelify');
 var browserify   = require('browserify');
-var source = require('vinyl-source-stream');
-var buffer = require('vinyl-buffer');
-var sourcemaps = require('gulp-sourcemaps');
+var source       = require('vinyl-source-stream');
+var buffer       = require('vinyl-buffer');
+var sourcemaps   = require('gulp-sourcemaps');
 
 // Static Server + watching scss/html files
 gulp.task('serve', ['sass', 'js'], function() {
@@ -18,6 +19,13 @@ gulp.task('serve', ['sass', 'js'], function() {
     gulp.watch('app/**/*.js', ['js']);
     gulp.watch('public/*.html').on('change', browserSync.reload);
 });
+
+// Run lint for js
+gulp.task('lint', function() {
+  return gulp.src(['**/*.js', '!node_modules/**'])
+    .pipe(eslint())
+    .pipe(eslint.format());
+})
 
 // Compile sass into CSS & auto-inject into browsers
 gulp.task('sass', function() {
