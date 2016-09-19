@@ -1,0 +1,29 @@
+.o__nav {
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  li {
+    display: inline-block;
+    width: 100%;
+    padding: 15px;
+
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.4em;
+    font-family: monospace;
+    border: 1px solid black;
+    color: black;
+
+    a {
+      display: block;
+      width: inherit;
+      height: inherit;
+
+      text-decoration: none;
+      color: black;
+    }
+  }
+}

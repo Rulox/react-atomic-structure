@@ -11,6 +11,7 @@ export default class Home extends React.Component {
     render() {
         return(
             <div>
+                <Title text="Basic React App" />
                 <Title text="Example of an atomic Blog"/>
                 <Article title="This is an article"
                      image={{'src': 'http://placehold.it/300x200', alt: 'Placehold'}}
