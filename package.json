@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Basic Structure for React app following Atomic Design",
   "scripts": {
-    "start": "gulp"
+    "start": "gulp",
+    "js-lint": "gulp lint"
   },
   "repository": {
     "type": "git",
