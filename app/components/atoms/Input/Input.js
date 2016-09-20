@@ -7,7 +7,7 @@ const Input = (props) => {
 };
 
 Input.propTypes = {
-  text: React.PropTypes.string.isRequired,
+  text: React.PropTypes.string,
   type: React.PropTypes.string,
   placeholder: React.PropTypes.string
 };

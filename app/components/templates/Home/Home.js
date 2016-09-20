@@ -30,6 +30,10 @@ const Home = (props) => {
   );
 };
 
+Home.propTypes = {
+  form: React.PropTypes.array
+};
+
 Home.defaultProps = {
   form: [
     {
@@ -43,7 +47,4 @@ Home.defaultProps = {
   ]
 };
 
-Home.propTypes = {
-  form: React.propTypes.node
-};
 export default Home;
