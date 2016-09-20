@@ -1,8 +1,9 @@
 # React Atomic Structure
+[![Build Status](https://travis-ci.org/Rulox/react-atomic-structure.svg?branch=master)](https://travis-ci.org/Rulox/react-atomic-structure)
 
 Basic Structure for React app following Atomic Design.
 
-This base project allows you to have a basic React App folder structure following the principles of Atomic Design.
+This base project allows you to have a basic React App folder structure following the principles of [Atomic Design]((http://bradfrost.com/blog/post/atomic-web-design/).
 It contain some basic components that you can use. All the components are not (or minimally) stylized. The main objective
 of this project is to have a basic structure, that is the reason we are not doing complex styles and/or adding many libs.
 
