@@ -2,33 +2,30 @@
 
 Basic Structure for React app following Atomic Design.
 
-This base project allows you to have a basic React App folder structure following the principles of Atomic Design. 
+This base project allows you to have a basic React App folder structure following the principles of Atomic Design.
 It contain some basic components that you can use. All the components are not (or minimally) stylized. The main objective
 of this project is to have a basic structure, that is the reason we are not doing complex styles and/or adding many libs.
 
 ## Tools
 
-This project uses:
-
-* Gulp
-* Sass
-* ES6
-* BrowserSync
-
 Using these package, you will be able to start a new fresh React project with the basic folder and file structures.
 
-This project uses ES6 in the JS side, and Sass for styles. It also uses BrowserSync, a tool that will create a 
+This project uses ES6 in the JS side, and Sass for styles. It also uses BrowserSync, a tool that will create a
 web server in your machine that automatically updates the code and the styles whenever the watcher detects a change.
+
+## Features
+
+* ES6 to JS Transpile
+* SASS to CSS 
+* Auto watcher for JS and SCSS files
+* Atomic design project structure
+* Launch server that updates itself every time we change a file with browsersync
+* JS Lint ( extending airbnb eslint styles )
 
 ## TODO List
 * Sass Lint
-* JS Lint
-* Mixin to pass additional classnames to components
-* Add components
 * Tests
 * Production build (minification, etc)
-* Add react-router ?
-* Add react-redux ?
 
 ## Requirements
 * nodejs v5.*
@@ -53,12 +50,12 @@ npm install -g gulp
 
 ##### Install npm dependencies
 ```bash
-npm install 
+npm install
 ```
 
 ##### Run the server
 ```bash
-npm run start 
+npm run start
 ```
 A browser window should open, if not, open it manually and go to http://localhost:3000/ (or any other URL+PORT that your terminal says). You can start working right now in the code, and all the changes will be visible in the browser just opened.
 
@@ -103,4 +100,3 @@ npm run start
 
 ## Contributions
 Feel free to create a pull request or create an issue to add features or fix bugs.
-

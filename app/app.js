@@ -1,23 +1,20 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 
-import Title from './components/atoms/Title/Title';
 import Home from './components/templates/Home/Home';
+import Main from './components/templates/Main/Main';
+import About from './components/templates/About/About';
 
-class App extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
-    render() {
-        // Note: You can use here react-router to render all your templates from this main App component.
-        return (
-            <div>
-                <Title text="Basic React App"/>
-                <Home/>
-            </div>
-        )
-    }
-}
+const App = () => {
+  return (
+    <Router history={browserHistory}>
+      <Route path="/" component={Main}>
+        <IndexRoute component={Home}/>
+        <Route path="/about" component={About}/>
+      </Route>
+    </Router>
+  );
+};
 
 ReactDOM.render(<App/>, document.getElementById('app'));

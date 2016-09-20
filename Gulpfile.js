@@ -1,13 +1,14 @@
 var gulp         = require('gulp');
+var eslint       = require('gulp-eslint');
 var browserSync  = require('browser-sync').create();
 var sass         = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var notify       = require('gulp-notify');
 var babelify     = require('babelify');
 var browserify   = require('browserify');
-var source = require('vinyl-source-stream');
-var buffer = require('vinyl-buffer');
-var sourcemaps = require('gulp-sourcemaps');
+var source       = require('vinyl-source-stream');
+var buffer       = require('vinyl-buffer');
+var sourcemaps   = require('gulp-sourcemaps');
 
 // Static Server + watching scss/html files
 gulp.task('serve', ['sass', 'js'], function() {
@@ -17,6 +18,13 @@ gulp.task('serve', ['sass', 'js'], function() {
     gulp.watch('app/**/*.scss', ['sass']);
     gulp.watch('app/**/*.js', ['js']);
     gulp.watch('public/*.html').on('change', browserSync.reload);
+});
+
+// Run lint for js
+gulp.task('jslint', function() {
+  return gulp.src(['app/**/*.js'])
+    .pipe(eslint())
+    .pipe(eslint.format());
 });
 
 // Compile sass into CSS & auto-inject into browsers
@@ -35,12 +43,9 @@ gulp.task('sass', function() {
 });
 
 // Transpile ES6 js (React app) into JS & auto-inject into browsers
-gulp.task('js', function() {
+gulp.task('js', ['jslint'], function() {
     var bundler = browserify('./app/app.js').transform("babelify", {presets: ["es2015", "react"]});
     return bundler.bundle()
-        /*.pipe(babel({
-            presets: ['es2015', 'stage-0', 'react']
-        }))*/
         .on('error', function(err) { console.error(err); this.emit('end'); })
         .pipe(source('app.js'))
         .pipe(buffer())
