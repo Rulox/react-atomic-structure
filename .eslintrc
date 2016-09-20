@@ -18,7 +18,9 @@
     "linebreak-style": 0,
     "react/jsx-filename-extension": 0,
     "arrow-body-style": 0,
-    "react/jsx-space-before-closing": 0
+    "react/jsx-space-before-closing": 0,
+    "eol-last": 0,
+    "max-len": ["error", 120]
   },
   "plugins": [ "react" ],
   "settings": {

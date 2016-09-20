@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 
 const Image = (props) => {
   return (
     <img className="a__image" src={props.src} alt={props.alt}/>
-  )
+  );
 };
 
 Image.propTypes = {
