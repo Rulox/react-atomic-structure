@@ -1,14 +1,16 @@
-var gulp         = require('gulp');
-var eslint       = require('gulp-eslint');
-var browserSync  = require('browser-sync').create();
-var sass         = require('gulp-sass');
-var autoprefixer = require('gulp-autoprefixer');
-var notify       = require('gulp-notify');
-var babelify     = require('babelify');
-var browserify   = require('browserify');
-var source       = require('vinyl-source-stream');
-var buffer       = require('vinyl-buffer');
-var sourcemaps   = require('gulp-sourcemaps');
+var gulp          = require('gulp');
+var eslint        = require('gulp-eslint');
+var gulpStyleLint = require('gulp-stylelint');
+var browserSync   = require('browser-sync').create();
+var sass          = require('gulp-sass');
+var autoprefixer  = require('gulp-autoprefixer');
+var notify        = require('gulp-notify');
+var babelify      = require('babelify');
+var browserify    = require('browserify');
+var source        = require('vinyl-source-stream');
+var buffer        = require('vinyl-buffer');
+var sourcemaps    = require('gulp-sourcemaps');
+
 
 // Static Server + watching scss/html files
 gulp.task('serve', ['sass', 'js'], function() {
@@ -20,6 +22,16 @@ gulp.task('serve', ['sass', 'js'], function() {
     gulp.watch('public/*.html').on('change', browserSync.reload);
 });
 
+// Run lint for sass
+gulp.task('stylelint', function lintCssTask() {
+  return gulp.src('./app/main.scss')
+    .pipe(gulpStyleLint({
+      reporters: [
+        {formatter: 'string', console: true}
+      ]
+    }));
+});
+
 // Run lint for js
 gulp.task('jslint', function() {
   return gulp.src(['app/**/*.js'])
@@ -28,7 +40,7 @@ gulp.task('jslint', function() {
 });
 
 // Compile sass into CSS & auto-inject into browsers
-gulp.task('sass', function() {
+gulp.task('sass', ['stylelint'], function() {
     return gulp.src('./app/main.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(autoprefixer({
