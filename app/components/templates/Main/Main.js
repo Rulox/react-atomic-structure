@@ -1,19 +1,19 @@
-import React from 'react'
+import React from 'react';
 
 import Nav from '../../organisms/Nav/Nav';
 
-export default class Main extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+const Main = (props) => {
+  return (
+    <div className="app">
+      <Nav />
 
-  render() {
-    return (
-      <div className="app">
-        <Nav />
+      {props.children}
+    </div>
+  );
+};
 
-        {this.props.children}
-      </div>
-    )
-  }
-}
+Main.propTypes = {
+  children: React.PropTypes.node
+};
+
+export default Main;

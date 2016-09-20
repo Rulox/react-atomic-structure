@@ -20,7 +20,9 @@
     "arrow-body-style": 0,
     "react/jsx-space-before-closing": 0,
     "eol-last": 0,
-    "max-len": ["error", 120]
+    "max-len": ["error", 120],
+    "react/forbid-prop-types": 0,
+    "object-curly-spacing": 0
   },
   "plugins": [ "react" ],
   "settings": {
