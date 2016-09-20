@@ -17,8 +17,8 @@ gulp.task('serve', ['sass', 'js'], function() {
     browserSync.init({
         server: './public'
     });
-    gulp.watch('app/**/*.scss', ['sass', 'stylelint']);
-    gulp.watch('app/**/*.js', ['js', 'jslint']);
+    gulp.watch('app/**/*.scss', ['sass']);
+    gulp.watch('app/**/*.js', ['js']);
     gulp.watch('public/*.html').on('change', browserSync.reload);
 });
 
@@ -40,7 +40,7 @@ gulp.task('jslint', function() {
 });
 
 // Compile sass into CSS & auto-inject into browsers
-gulp.task('sass', function() {
+gulp.task('sass', ['stylelint'], function() {
     return gulp.src('./app/main.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(autoprefixer({
