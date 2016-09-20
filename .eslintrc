@@ -15,7 +15,10 @@
     "indent": [2, 2, {"SwitchCase": 1}],
     "no-console": 0,
     "no-alert": 0,
-    "linebreak-style": 0
+    "linebreak-style": 0,
+    "react/jsx-filename-extension": 0,
+    "arrow-body-style": 0,
+    "react/jsx-space-before-closing": 0
   },
   "plugins": [ "react" ],
   "settings": {
