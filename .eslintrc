@@ -1,18 +1,27 @@
 {
+  "extends": "eslint-config-airbnb",
   "env": {
-    "node": true
+    "browser": true
   },
-  "parserOptions": {
-      "ecmaVersion": 7,
-      "sourceType": "module",
-      "ecmaFeatures": {
-          "jsx": true,
-      }
-  },
-  "globals": {},
-  "plugins": [],
-
   "rules": {
-    "no-reserved-keys": 0,
+    "react/no-multi-comp": 0,
+    "import/default": 0,
+    "import/no-duplicates": 0,
+    "import/named": 0,
+    "import/namespace": 0,
+    "import/no-unresolved": 0,
+    "import/no-named-as-default": 2,
+    "comma-dangle": 0,  // not sure why airbnb turned this on. gross!
+    "indent": [2, 2, {"SwitchCase": 1}],
+    "no-console": 0,
+    "no-alert": 0,
+    "linebreak-style": 0
   },
+  "plugins": [ "react" ],
+  "settings": {
+    "import/parser": "babel-eslint",
+    "import/resolve": {
+      "moduleDirectory": ["node_modules", "src"]
+    }
+  }
 }

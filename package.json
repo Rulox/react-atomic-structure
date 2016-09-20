@@ -4,7 +4,7 @@
   "description": "Basic Structure for React app following Atomic Design",
   "scripts": {
     "start": "gulp",
-    "js-lint": "gulp lint"
+    "js-lint": "gulp jslint"
   },
   "repository": {
     "type": "git",
@@ -34,6 +34,10 @@
     "babelify": "^7.3.0",
     "browser-sync": "^2.14.0",
     "browserify": "^13.1.0",
+    "eslint-config-airbnb": "^11.1.0",
+    "eslint-plugin-import": "^1.15.0",
+    "eslint-plugin-jsx-a11y": "^2.2.2",
+    "eslint-plugin-react": "^6.3.0",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-eslint": "^3.0.1",
     "gulp-notify": "^2.2.0",

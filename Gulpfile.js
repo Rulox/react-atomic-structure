@@ -21,11 +21,11 @@ gulp.task('serve', ['sass', 'js'], function() {
 });
 
 // Run lint for js
-gulp.task('lint', function() {
-  return gulp.src(['**/*.js', '!node_modules/**'])
+gulp.task('jslint', function() {
+  return gulp.src(['app/**/*.js'])
     .pipe(eslint())
     .pipe(eslint.format());
-})
+});
 
 // Compile sass into CSS & auto-inject into browsers
 gulp.task('sass', function() {
@@ -43,12 +43,9 @@ gulp.task('sass', function() {
 });
 
 // Transpile ES6 js (React app) into JS & auto-inject into browsers
-gulp.task('js', function() {
+gulp.task('js', ['jslint'], function() {
     var bundler = browserify('./app/app.js').transform("babelify", {presets: ["es2015", "react"]});
     return bundler.bundle()
-        /*.pipe(babel({
-            presets: ['es2015', 'stage-0', 'react']
-        }))*/
         .on('error', function(err) { console.error(err); this.emit('end'); })
         .pipe(source('app.js'))
         .pipe(buffer())

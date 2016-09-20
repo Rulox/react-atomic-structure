@@ -8,24 +8,24 @@ of this project is to have a basic structure, that is the reason we are not doin
 
 ## Tools
 
-This project uses:
-
-* Gulp
-* Sass
-* ES6
-* BrowserSync
-
 Using these package, you will be able to start a new fresh React project with the basic folder and file structures.
 
 This project uses ES6 in the JS side, and Sass for styles. It also uses BrowserSync, a tool that will create a
 web server in your machine that automatically updates the code and the styles whenever the watcher detects a change.
 
+## Features
+
+* ES6 to JS Transpile
+* SASS to CSS 
+* Auto watcher for JS and SCSS files
+* Atomic design project structure
+* Launch server that updates itself every time we change a file
+* JS Lint (credits to @nkbt [Gist](https://gist.github.com/nkbt/9efd4facb391edbf8048))
+
 ## TODO List
 * Sass Lint
-* JS Lint
 * Tests
 * Production build (minification, etc)
-* Add react-redux ?
 
 ## Requirements
 * nodejs v5.*
