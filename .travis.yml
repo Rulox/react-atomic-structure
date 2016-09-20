@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+  - 5
+sudo: false
+cache:
+  directories:
+  - node_modules
+before_install:
+- |
+  npm install
+  npm --version
+script:
+  - npm run js-lint -s
