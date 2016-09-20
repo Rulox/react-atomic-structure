@@ -4,44 +4,44 @@ import Article from '../../organisms/Article/Article'
 import Form from '../../organisms/Form/Form'
 
 export default class Home extends React.Component {
-    constructor(props) {
-        super(props);
-    }
+  constructor(props) {
+    super(props);
+  }
 
-    render() {
-        return(
-            <div>
-                <Title text="Basic React App" />
-                <Title text="Example of an atomic Blog"/>
-                <Article title="This is an article"
-                     image={{'src': 'http://placehold.it/300x200', alt: 'Placehold'}}
-                     content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id nulla cursus,
+  render() {
+    return (
+      <div>
+        <Title text="Basic React App"/>
+        <Title text="Example of an atomic Blog"/>
+        <Article title="This is an article"
+                 image={{'src': 'http://placehold.it/300x200', alt: 'Placehold'}}
+                 content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id nulla cursus,
                      hendrerit lectus id, pulvinar massa."/>
 
-                <Article title="This is an article"
-                     image={{'src': 'http://placehold.it/300x200', alt: 'Placehold'}}
-                     content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id nulla cursus,
+        <Article title="This is an article"
+                 image={{'src': 'http://placehold.it/300x200', alt: 'Placehold'}}
+                 content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id nulla cursus,
                      hendrerit lectus id, pulvinar massa."/>
 
-                <hr/>
+        <hr/>
 
-                <Title text="Example of an Atomic Form"/>
-                <Form fields={this.props.form} buttonText="Submit"/>
-            </div>
-        )
-    }
+        <Title text="Example of an Atomic Form"/>
+        <Form fields={this.props.form} buttonText="Submit"/>
+      </div>
+    )
+  }
 }
 
 
 Home.defaultProps = {
-    form: [
-        {
-            label: "Input 1",
-            placeholder: "Placeholder for Input 1"
-        },
-        {
-            label: "Input 2",
-            placeholder: "Placeholder for Input 2"
-        }
-    ]
+  form: [
+    {
+      label: "Input 1",
+      placeholder: "Placeholder for Input 1"
+    },
+    {
+      label: "Input 2",
+      placeholder: "Placeholder for Input 2"
+    }
+  ]
 };

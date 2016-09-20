@@ -1,14 +1,14 @@
 import React from 'react'
 
 const Image = (props) => {
-    return (
-        <img className="a__image" src={props.src} alt={props.alt}/>
-    )
+  return (
+    <img className="a__image" src={props.src} alt={props.alt}/>
+  )
 };
 
 Image.propTypes = {
-    src: React.PropTypes.string.isRequired,
-    alt: React.PropTypes.string
+  src: React.PropTypes.string.isRequired,
+  alt: React.PropTypes.string
 };
 
 export default Image;

@@ -1,13 +1,13 @@
 import React from 'react'
-import { Link } from 'react-router'
+import {Link} from 'react-router'
 
 export default class Nav extends React.Component {
   constructor(props) {
-      super(props);
+    super(props);
   }
 
   render() {
-    return(
+    return (
       <nav className="o__nav">
         <ul>
           <li><Link to="/">Home</Link></li>

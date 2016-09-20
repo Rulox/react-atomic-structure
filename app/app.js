@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Router, Route, IndexRoute, browserHistory } from 'react-router';
+import {Router, Route, IndexRoute, browserHistory} from 'react-router';
 
 import Home from './components/templates/Home/Home';
 import Main from './components/templates/Main/Main';
@@ -10,7 +10,7 @@ const App = () => {
   return (
     <Router history={browserHistory}>
       <Route path="/" component={Main}>
-        <IndexRoute component={Home} />
+        <IndexRoute component={Home}/>
         <Route path="/about" component={About}/>
       </Route>
     </Router>
