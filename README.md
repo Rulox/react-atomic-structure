@@ -1,5 +1,6 @@
 # React Atomic Structure
-[![Build Status](https://travis-ci.org/Rulox/react-atomic-structure.svg?branch=master)](https://travis-ci.org/Rulox/react-atomic-structure)
+[![Build Status](https://travis-ci.org/Rulox/react-atomic-structure.svg?branch=master)](https://travis-ci.org/Rulox/react-atomic-structure) [![Dependency Status](https://gemnasium.com/badges/github.com/Rulox/react-atomic-structure.svg)](https://gemnasium.com/github.com/Rulox/react-atomic-structure)
+
 
 Basic Structure for React app following Atomic Design.
 
