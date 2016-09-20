@@ -19,8 +19,8 @@ web server in your machine that automatically updates the code and the styles wh
 * SASS to CSS 
 * Auto watcher for JS and SCSS files
 * Atomic design project structure
-* Launch server that updates itself every time we change a file
-* JS Lint (credits to @nkbt [Gist](https://gist.github.com/nkbt/9efd4facb391edbf8048))
+* Launch server that updates itself every time we change a file with browsersync
+* JS Lint ( extending airbnb eslint styles )
 
 ## TODO List
 * Sass Lint
