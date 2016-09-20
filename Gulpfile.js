@@ -17,13 +17,13 @@ gulp.task('serve', ['sass', 'js'], function() {
     browserSync.init({
         server: './public'
     });
-    gulp.watch('app/**/*.scss', ['sass']);
-    gulp.watch('app/**/*.js', ['js']);
+    gulp.watch('app/**/*.scss', ['sass', 'stylelint']);
+    gulp.watch('app/**/*.js', ['js', 'jslint']);
     gulp.watch('public/*.html').on('change', browserSync.reload);
 });
 
 // Run lint for sass
-gulp.task('lint-css', function lintCssTask() {
+gulp.task('stylelint', function lintCssTask() {
   return gulp.src('./app/main.scss')
     .pipe(gulpStyleLint({
       reporters: [
@@ -31,6 +31,7 @@ gulp.task('lint-css', function lintCssTask() {
       ]
     }));
 });
+
 // Run lint for js
 gulp.task('jslint', function() {
   return gulp.src(['app/**/*.js'])
