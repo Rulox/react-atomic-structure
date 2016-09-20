@@ -1,36 +1,30 @@
-import React from 'react'
+import React from 'react';
 import Title from '../../atoms/Title/Title';
-import Article from '../../organisms/Article/Article'
-import Form from '../../organisms/Form/Form'
+import Article from '../../organisms/Article/Article';
+import Form from '../../organisms/Form/Form';
 
-export default class Home extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+const Home = (props) => {
+  return (
+    <div>
+      <Title text="Basic React App"/>
+      <Title text="Example of an atomic Blog"/>
+      <Article title="This is an article"
+               image={{'src': 'http://placehold.it/300x200', alt: 'Placehold'}}
+               content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id nulla cursus,
+                   hendrerit lectus id, pulvinar massa."/>
 
-  render() {
-    return (
-      <div>
-        <Title text="Basic React App"/>
-        <Title text="Example of an atomic Blog"/>
-        <Article title="This is an article"
-                 image={{'src': 'http://placehold.it/300x200', alt: 'Placehold'}}
-                 content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id nulla cursus,
-                     hendrerit lectus id, pulvinar massa."/>
+      <Article title="This is an article"
+               image={{'src': 'http://placehold.it/300x200', alt: 'Placehold'}}
+               content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id nulla cursus,
+                   hendrerit lectus id, pulvinar massa."/>
 
-        <Article title="This is an article"
-                 image={{'src': 'http://placehold.it/300x200', alt: 'Placehold'}}
-                 content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id nulla cursus,
-                     hendrerit lectus id, pulvinar massa."/>
+      <hr/>
 
-        <hr/>
-
-        <Title text="Example of an Atomic Form"/>
-        <Form fields={this.props.form} buttonText="Submit"/>
-      </div>
-    )
-  }
-}
+      <Title text="Example of an Atomic Form"/>
+      <Form fields={props.form} buttonText="Submit"/>
+    </div>
+  )
+};
 
 
 Home.defaultProps = {
@@ -45,3 +39,5 @@ Home.defaultProps = {
     }
   ]
 };
+
+export default Home;
