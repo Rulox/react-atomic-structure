@@ -17,14 +17,14 @@ web server in your machine that automatically updates the code and the styles wh
 ## Features
 
 * ES6 to JS Transpile
-* SASS to CSS 
+* SASS to CSS
 * Auto watcher for JS and SCSS files
 * Atomic design project structure
 * Launch server that updates itself every time we change a file with browsersync
 * JS Lint ( extending airbnb eslint styles )
+* Styleint
 
 ## TODO List
-* Sass Lint
 * Tests
 * Production build (minification, etc)
 
@@ -67,7 +67,7 @@ These components are just an idea on how to develop your application following t
 them in order to do your own app!
 
 #### Atoms (stateless component)
-* Link
+* Anchor
 * Label
 * Button
 * Input
@@ -82,9 +82,11 @@ them in order to do your own app!
 #### Organisms
 * Article
 * Form
+* Nav
 
 #### Templates
 * Home
+* About
 
 ## Folder structure and explanation
 WIP
