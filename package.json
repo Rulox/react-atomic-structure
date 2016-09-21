@@ -4,7 +4,8 @@
   "description": "Basic Structure for React app following Atomic Design",
   "scripts": {
     "start": "gulp",
-    "js-lint": "gulp jslint"
+    "js-lint": "gulp jslint",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -45,6 +46,7 @@
     "gulp-sass": "^2.3.2",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-stylelint": "^3.2.0",
+    "jest": "^15.1.1",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0"
   }
