@@ -89,8 +89,14 @@ them in order to do your own app!
 * Home
 * About
 
-## Folder structure and explanation
-WIP
+## Creating your own component
+
+To create a new component, just create a new folder in the atoms/molecules/organisms/templates folder with the
+name of your component.
+
+Create now the React component in the js file. Also create your .scss file and remember to import it in the _style.scss
+of the parent folder (For example, if you're creating a new atom called Checkbox, you should have `atoms/Checkbox/_style.scss`. So in
+the main style file for atoms `atoms/_style.scss` just import your new scss file so it can be imported.
 
 ## NPM Scripts
 This project comes with the following scripts to help you.
@@ -101,6 +107,21 @@ npm run start
 1. Create CSS and JS bundles from Sass and JS.
 2. Launch a browsersync web server and open default browser.
 3. Launch watchers on JS/CSS files.
+
+```bash
+npm run build-dev
+```
+1. Build CSS and JS from sources but does not start browsersync server.
+
+```bash
+npm run js-lint
+```
+1. Launch JS Lint checker.
+
+```bash
+npm run sass-lint
+```
+1. Launch SASS Lint checker. 
 
 ## Contributions
 Feel free to create a pull request or create an issue to add features or fix bugs.
