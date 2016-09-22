@@ -2,6 +2,7 @@ var gulp          = require('gulp');
 var eslint        = require('gulp-eslint');
 var uglify        = require('gulp-uglify'),
     concat        = require('gulp-concat');
+var cleanCSS      = require('gulp-clean-css');
 var gulpStyleLint = require('gulp-stylelint');
 var browserSync   = require('browser-sync').create();
 var sass          = require('gulp-sass');
@@ -15,7 +16,7 @@ var sourcemaps    = require('gulp-sourcemaps');
 
 
 // Static Server + watching scss/html files
-gulp.task('serve', ['sass', 'js', 'uglify'], function() {
+gulp.task('serve', ['sass', 'js'], function() {
     browserSync.init({
       server: './public'
     });
@@ -43,11 +44,19 @@ gulp.task('jslint', function() {
 
 // Min js files
 gulp.task('uglify', ['js'], function() {
-  gulp.src('public/js/app.js')
+  gulp.src('./public/js/app.js')
   .pipe(uglify())
   .pipe(concat('app.min.js'))
   .pipe(gulp.dest('./public/js'))
 });
+
+// Min css files
+gulp.task('minify-css', ['sass'], function() {
+  gulp.src('./public/css/main.css')
+  .pipe(cleanCSS())
+  .pipe(concat('main.min.css'))
+  .pipe(gulp.dest('./public/css'))
+})
 
 // Compile sass into CSS & auto-inject into browsers
 gulp.task('sass', ['stylelint'], function() {
