@@ -1,5 +1,8 @@
 var gulp          = require('gulp');
 var eslint        = require('gulp-eslint');
+var uglify        = require('gulp-uglify');
+var concat        = require('gulp-concat');
+var cleanCSS      = require('gulp-clean-css');
 var gulpStyleLint = require('gulp-stylelint');
 var browserSync   = require('browser-sync').create();
 var sass          = require('gulp-sass');
@@ -38,6 +41,22 @@ gulp.task('jslint', function() {
     .pipe(eslint())
     .pipe(eslint.format());
 });
+
+// Min js files
+gulp.task('uglify', ['js'], function() {
+  gulp.src('./public/js/app.js')
+  .pipe(uglify())
+  .pipe(concat('app.min.js'))
+  .pipe(gulp.dest('./public/js'))
+});
+
+// Min css files
+gulp.task('minify-css', ['sass'], function() {
+  gulp.src('./public/css/main.css')
+  .pipe(cleanCSS())
+  .pipe(concat('main.min.css'))
+  .pipe(gulp.dest('./public/css'))
+})
 
 // Compile sass into CSS & auto-inject into browsers
 gulp.task('sass', ['stylelint'], function() {

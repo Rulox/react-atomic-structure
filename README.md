@@ -19,6 +19,7 @@ web server in your machine that automatically updates the code and the styles wh
 
 * ES6 to JS Transpile
 * SASS to CSS
+* React Router	
 * Auto watcher for JS and SCSS files
 * Atomic design project structure
 * Launch server that updates itself every time we change a file with browsersync
