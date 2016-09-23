@@ -28,7 +28,6 @@ web server in your machine that automatically updates the code and the styles wh
 
 ## TODO List
 * Tests
-* Production build (minification, etc)
 
 ## Requirements
 * nodejs v5.*
