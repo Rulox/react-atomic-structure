@@ -114,6 +114,16 @@ npm run build-dev
 1. Build CSS and JS from sources but does not start browsersync server.
 
 ```bash
+npm run build-prod
+```
+1. Build CSS and JS minified and ready for production but does not start browsersync server.
+
+```bash
+npm run start-server
+```
+1. Run the server serving the `/public` folder using browsersync.
+
+```bash
 npm run js-lint
 ```
 1. Launch JS Lint checker.
