@@ -19,6 +19,7 @@ web server in your machine that automatically updates the code and the styles wh
 
 * ES6 to JS Transpile
 * SASS to CSS
+* React Router	
 * Auto watcher for JS and SCSS files
 * Atomic design project structure
 * Launch server that updates itself every time we change a file with browsersync
@@ -27,7 +28,6 @@ web server in your machine that automatically updates the code and the styles wh
 
 ## TODO List
 * Tests
-* Production build (minification, etc)
 
 ## Requirements
 * nodejs v5.*
@@ -112,6 +112,16 @@ npm run start
 npm run build-dev
 ```
 1. Build CSS and JS from sources but does not start browsersync server.
+
+```bash
+npm run build-prod
+```
+1. Build CSS and JS minified and ready for production but does not start browsersync server.
+
+```bash
+npm run start-server
+```
+1. Run the server serving the `/public` folder using browsersync.
 
 ```bash
 npm run js-lint

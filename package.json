@@ -4,7 +4,9 @@
   "description": "Basic Structure for React app following Atomic Design",
   "scripts": {
     "start": "gulp",
+    "start-server": "gulp start",
     "build-dev": "gulp js && gulp sass",
+    "build-prod": "gulp production",
     "js-lint": "gulp jslint",
     "sass-lint": "gulp stylelint"
   },
@@ -42,11 +44,14 @@
     "eslint-plugin-jsx-a11y": "^2.2.2",
     "eslint-plugin-react": "^6.3.0",
     "gulp-autoprefixer": "^3.1.1",
+    "gulp-clean-css": "^2.0.12",
+    "gulp-concat": "^2.6.0",
     "gulp-eslint": "^3.0.1",
     "gulp-notify": "^2.2.0",
     "gulp-sass": "^2.3.2",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-stylelint": "^3.2.0",
+    "gulp-uglify": "^2.0.0",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0"
   }
