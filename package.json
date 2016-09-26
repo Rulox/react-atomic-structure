@@ -4,7 +4,9 @@
   "description": "Basic Structure for React app following Atomic Design",
   "scripts": {
     "start": "gulp",
+    "start-server": "gulp start",
     "build-dev": "gulp js && gulp sass",
+    "build-prod": "gulp production",
     "js-lint": "gulp jslint",
     "sass-lint": "gulp stylelint"
   },
