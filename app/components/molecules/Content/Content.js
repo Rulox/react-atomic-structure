@@ -5,8 +5,8 @@ import Paragraph from '../../atoms/Paragraph/Paragraph';
 const Content = (props) => {
   return (
     <div className="m__content">
-      <Title text={props.title}/>
-      <Paragraph text={props.text}/>
+      <Title>{props.title}</Title>
+      <Paragraph>{props.text}</Paragraph>
     </div>
   );
 };
