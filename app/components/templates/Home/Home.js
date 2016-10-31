@@ -6,8 +6,8 @@ import Form from '../../organisms/Form/Form';
 const Home = (props) => {
   return (
     <div>
-      <Title text="Basic React App"/>
-      <Title text="Example of an atomic Blog"/>
+      <Title>Basic React App</Title>
+      <Title>Example of an atomic Blog</Title>
       <Article
         title="This is an article"
         image={{src: 'http://placehold.it/300x200', alt: 'Placehold'}}
@@ -24,7 +24,7 @@ const Home = (props) => {
 
       <hr/>
 
-      <Title text="Example of an Atomic Form"/>
+      <Title>Example of an Atomic Form</Title>
       <Form fields={props.form} buttonText="Submit"/>
     </div>
   );

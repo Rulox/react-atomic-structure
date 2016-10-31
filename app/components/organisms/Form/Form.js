@@ -12,7 +12,7 @@ const Form = (props) => {
           );
         })
       }
-      <Button text={props.buttonText}/>
+      <Button>{props.buttonText}</Button>
     </form>
   );
 };

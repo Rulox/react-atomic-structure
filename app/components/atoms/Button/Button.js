@@ -2,12 +2,12 @@ import React from 'react';
 
 const Button = (props) => {
   return (
-    <button className="a__button">{props.text}</button>
+    <button className="a__button">{props.children}</button>
   );
 };
 
 Button.propTypes = {
-  text: React.PropTypes.string.isRequired
+  children: React.PropTypes.string.isRequired
 };
 
 export default Button;

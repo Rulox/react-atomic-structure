@@ -3,7 +3,7 @@ import Title from '../../atoms/Title/Title';
 
 const About = () => {
   return (
-    <Title text="This is an example About page"/>
+    <Title>"This is an example About page"</Title>
   );
 };
 
