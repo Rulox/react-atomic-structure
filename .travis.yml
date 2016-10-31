@@ -11,3 +11,4 @@ before_install:
   npm --version
 script:
   - npm run js-lint -s
+  - npm run sass-lint -s
