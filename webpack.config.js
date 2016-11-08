@@ -16,17 +16,17 @@ module.exports = {
     main: './app/app.js'
   },
   output: {
-    filename: "index_bundle.js",
+    filename: "index.js",
     path: __dirname + '/dist'
   },
   devtool: 'source-map',
   module: {
     loaders: [
-      //{
-      //  test: /\.js$/,
-      //  exclude: /(node_modules)/,
-      //  loader: 'react-hot-loader/babel'
-      //},
+      {
+        test: /\.js$/,
+        exclude: /(node_modules)/,
+        loader: 'react-hot-loader/webpack'
+      },
       {
         test: /\.js$/,
         exclude: /(node_modules)/,
@@ -41,9 +41,8 @@ module.exports = {
       }
     ]
   },
-
-  // plugins: [HTMLWebpackPluginConfig]
   plugins: [
-    ExtractTextPluginConfig
+    ExtractTextPluginConfig,
+    HTMLWebpackPluginConfig
   ]
 }
