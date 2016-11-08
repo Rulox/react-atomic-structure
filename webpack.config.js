@@ -1,4 +1,10 @@
-var HtmlWebpackPlugin = require('html-webpack-plugin')
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
+
+var ExtractTextPluginConfig = new ExtractTextPlugin(
+  'style/main.css', {
+    allChunks: true
+});
 var HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
   template: __dirname + '/public/index.html',
   filename: 'index.html',
@@ -6,17 +12,38 @@ var HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
 });
 
 module.exports = {
-  entry: [
-    './app/app.js'
-  ],
-  module: {
-    loaders: [
-      { bundle: /\.js$/, include: __dirname + '/app', loader: "babel-loader" }
-    ]
+  entry: {
+    main: './app/app.js'
   },
   output: {
     filename: "index_bundle.js",
     path: __dirname + '/dist'
   },
-  plugins: [HTMLWebpackPluginConfig]
+  devtool: 'source-map',
+  module: {
+    loaders: [
+      //{
+      //  test: /\.js$/,
+      //  exclude: /(node_modules)/,
+      //  loader: 'react-hot-loader/babel'
+      //},
+      {
+        test: /\.js$/,
+        exclude: /(node_modules)/,
+        loader: "babel",
+        query: {
+          presets: ['react', 'es2015']
+        }
+      },
+      {
+        test: /\.scss$/,
+	      loader: ExtractTextPluginConfig.extract('css!sass')
+      }
+    ]
+  },
+
+  // plugins: [HTMLWebpackPluginConfig]
+  plugins: [
+    ExtractTextPluginConfig
+  ]
 }
