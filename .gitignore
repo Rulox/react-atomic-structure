@@ -1,6 +1,7 @@
 .idea
 node_modules
 npm-debug.log
+webpack.config.js.swp
 
 # Dest assets folders
 public/css
