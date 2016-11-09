@@ -10,15 +10,17 @@ import About from './components/templates/About/About';
 // Stylesheets
 require('./main.scss');
 
-const App = () => {
-  return (
-    <Router history={browserHistory}>
-      <Route path="/" component={Main}>
-        <IndexRoute component={Home}/>
-        <Route path="/about" component={About}/>
-      </Route>
-    </Router>
-  );
-};
+const App = () =>
+   (
+     <Router history={browserHistory}>
+       <Route path="/" component={Main}>
+         <IndexRoute component={Home} />
+         <Route path="/about" component={About} />
+       </Route>
+     </Router>
+  )
+;
 
-ReactDOM.render(<App/>, document.getElementById('app'));
+if (typeof window !== 'undefined') {
+  ReactDOM.render(<App />, document.getElementById('app'));
+}
