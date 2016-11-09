@@ -1,56 +1,57 @@
-var HtmlWebpackPlugin = require('html-webpack-plugin');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-var ExtractTextPluginConfig = new ExtractTextPlugin(
+const ExtractTextPluginConfig = new ExtractTextPlugin(
   'style/main.css', {
-    allChunks: true
-});
-var HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
-  template: __dirname + '/public/index.html',
+    allChunks: true,
+  });
+const HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
+  template: `${__dirname}/public/index.html`,
   filename: 'index.html',
-  inject: 'body'
+  inject: 'body',
 });
 
 module.exports = {
   entry: {
-    main: './app/app.js'
+    main: './app/app.js',
   },
   output: {
-    filename: "index.js",
-    path: __dirname + '/dist'
+    filename: 'index.js',
+    path: `${__dirname}/dist`,
   },
   devtool: 'source-map',
   module: {
     loaders: [
       {
-        test: /\.js$/,
-        exclude: /(node_modules)/,
-        loader: 'react-hot-loader/webpack'
-      },
-      {
-        test: /\.js$/,
-        exclude: /(node_modules)/,
-        loader: "babel",
-        query: {
-          presets: ['react', 'es2015']
-        }
-      },
-      {
-        test: /\.js$/,
+        enforce: 'pre',
+        test: /\.jsx?$/,
         exclude: /node_modules/,
-        loader: 'eslint-loader'
+        loader: 'eslint-loader',
+      },
+      {
+        test: /\.jsx?$/,
+        exclude: /(node_modules)/,
+        loader: 'react-hot-loader/webpack!babel',
+      },
+      {
+        test: /\.jsx?$/,
+        exclude: /(node_modules)/,
+        loader: 'babel',
+        query: {
+          presets: ['react', 'es2015'],
+        },
       },
       {
         test: /\.scss$/,
-	      loader: ExtractTextPluginConfig.extract('css!sass')
-      }
-    ]
+	      loader: ExtractTextPluginConfig.extract('css!sass'),
+      },
+    ],
   },
   eslint: {
-    configFile: './.eslintrc'
+    configFile: './.eslintrc',
   },
   plugins: [
     ExtractTextPluginConfig,
-    HTMLWebpackPluginConfig
-  ]
-}
+    HTMLWebpackPluginConfig,
+  ],
+};
