@@ -13,7 +13,7 @@ const HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
 
 module.exports = {
   entry: {
-    main: './app/app.js',
+    main: './app/app.jsx',
   },
   output: {
     filename: 'index.js',
@@ -38,17 +38,20 @@ module.exports = {
         exclude: /(node_modules)/,
         loader: 'babel',
         query: {
-          presets: ['react', 'es2015'],
+          presets: ['es2015', 'react'],
         },
       },
       {
         test: /\.scss$/,
-	      loader: ExtractTextPluginConfig.extract('css!sass'),
+        loader: ExtractTextPluginConfig.extract('css!sass'),
       },
     ],
   },
   eslint: {
     configFile: './.eslintrc',
+  },
+  resolve: {
+    extensions: ['', '.js', '.jsx'],
   },
   plugins: [
     ExtractTextPluginConfig,
