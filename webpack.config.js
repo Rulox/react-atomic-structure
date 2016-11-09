@@ -36,10 +36,18 @@ module.exports = {
         }
       },
       {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'eslint-loader'
+      },
+      {
         test: /\.scss$/,
 	      loader: ExtractTextPluginConfig.extract('css!sass')
       }
     ]
+  },
+  eslint: {
+    configFile: './.eslintrc'
   },
   plugins: [
     ExtractTextPluginConfig,
