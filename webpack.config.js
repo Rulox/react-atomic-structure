@@ -1,6 +1,13 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const StyleLintPlugin = require('stylelint-webpack-plugin');
 
+const StyleLintPluginConfig = new StyleLintPlugin({
+  configFile: '.stylelintrc',
+  files: ['app/*.s?(a|c)ss', 'app/components/*/*.s?(a|c)ss', 'app/components/*/*/*.s?(a|c)ss'], // Will have to change this
+  failOnError: false,
+  quiet: false,
+});
 const ExtractTextPluginConfig = new ExtractTextPlugin(
   'style/main.css', {
     allChunks: true,
@@ -56,5 +63,6 @@ module.exports = {
   plugins: [
     ExtractTextPluginConfig,
     HTMLWebpackPluginConfig,
+    StyleLintPluginConfig
   ],
 };

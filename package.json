@@ -7,7 +7,6 @@
     "start": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --hot --progress --colors --inline",
     "lint": "eslint ./app/ --ext .js --ext .jsx --fix",
     "watch": "webpack --watch --progress"
-
   },
   "repository": {
     "type": "git",
@@ -51,6 +50,7 @@
     "react-hot-loader": "^3.0.0-beta.6",
     "sass-loader": "^4.0.2",
     "style-loader": "^0.13.1",
+    "stylelint-webpack-plugin": "^0.4.0",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",
     "webpack": "^1.13.3",
