@@ -26,8 +26,7 @@
     "object-curly-spacing": 0
   },
   "plugins": [ "react" ],
-  "settings": {
-    # "import/parser": "babel-eslint", <- Appears to not work in linter
+  "settings": {  
     "import/resolve": {
       "moduleDirectory": ["node_modules", "src"]
     }
