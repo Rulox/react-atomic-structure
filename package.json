@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "description": "Basic Structure for React app following Atomic Design",
   "scripts": {
-    "build": "./node_modules/webpack/bin/webpack.js -p",
-    "start": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --hot --progress --colors --inline",
+    "build": "webpack -p",
+    "start": "webpack-dev-server --hot --progress --colors --inline",
     "lint": "eslint ./app/ --ext .js --ext .jsx --fix",
-    "watch": "webpack --watch --progress"
+    "watch": "webpack --watch --progress",
+    "clean": "rm -rf dist && npm cache clean"
   },
   "repository": {
     "type": "git",

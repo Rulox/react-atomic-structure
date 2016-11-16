@@ -1,7 +1,7 @@
 {
   "rules": {
     "max-empty-lines": 2,
-    "max-line-length": 10,
+    "max-line-length": 90,
     "max-nesting-depth": 3,
   }
 }

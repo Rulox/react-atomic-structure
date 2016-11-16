@@ -28,13 +28,17 @@ module.exports = {
   },
   devtool: 'source-map',
   module: {
-    loaders: [
+    preLoaders: [
       {
-        enforce: 'pre',
         test: /\.jsx?$/,
         exclude: /node_modules/,
         loader: 'eslint-loader',
-      },
+      }
+    ],
+    loaders: [
+      //
+      // { enforce: 'pre', test: /\.jsx?$/, exclude: /node_modules/, loader: 'eslint-loader', }, <--- Needed for webpack 2.^
+      //
       {
         test: /\.jsx?$/,
         exclude: /(node_modules)/,
@@ -56,6 +60,7 @@ module.exports = {
   },
   eslint: {
     configFile: './.eslintrc',
+    failOnError: true
   },
   resolve: {
     extensions: ['', '.js', '.jsx'],
