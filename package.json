@@ -5,7 +5,7 @@
   "scripts": {
     "build": "webpack -p",
     "start": "webpack-dev-server --inline --hot --progress --colors",
-    "lint": "eslint ./app/ --ext .js --ext .jsx --fix",
+    "lint":  "eslint ./app/ --ext .js --ext .jsx --fix",
     "watch": "webpack --watch --progress",
     "clean": "rm -rf dist && npm cache clean"
   },

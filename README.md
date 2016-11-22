@@ -19,15 +19,16 @@ web server in your machine that automatically updates the code and the styles wh
 
 * ES6 to JS Transpile
 * SASS to CSS
-* React Router	
+* React Router
 * Auto watcher for JS and SCSS files
 * Atomic design project structure
-* Launch server that updates itself every time we change a file with browsersync
+* Launch server with hot-reload using webpack
 * JS Lint ( extending airbnb eslint styles )
 * Styleint
 
 ## TODO List
 * Tests
+* Upgrade to Webpack 2.^ once stable
 
 ## Requirements
 * nodejs v5.*
@@ -64,8 +65,7 @@ A browser window should open, if not, open it manually and go to http://localhos
 ## Predefined components
 But first, [What is Atomic Design?](http://bradfrost.com/blog/post/atomic-web-design/)
 
-These components are just an idea on how to develop your application following the Atomic Design. Feel free to upgrade/delete
-them in order to do your own app!
+These components are just an idea on how to develop your application following the Atomic Design. Feel free to upgrade/delete them in order to do your own app!
 
 #### Atoms (stateless component)
 * Anchor
@@ -131,7 +131,7 @@ npm run js-lint
 ```bash
 npm run sass-lint
 ```
-1. Launch SASS Lint checker. 
+1. Launch SASS Lint checker.
 
 ## Contributions
 Feel free to create a pull request or create an issue to add features or fix bugs.
