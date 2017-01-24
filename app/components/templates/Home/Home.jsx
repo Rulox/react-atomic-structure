@@ -3,32 +3,31 @@ import Title from '../../atoms/Title/Title';
 import Article from '../../organisms/Article/Article';
 import Form from '../../organisms/Form/Form';
 
-const Home = props =>
-   (
-     <div>
-       <Title text="Basic React App" />
-       <Title text="Example of an atomic Blog" />
-       <Article
-         title="This is an article"
-         image={{ src: 'http://placehold.it/300x200', alt: 'Placehold' }}
-         content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id nulla cursus,
-        hendrerit lectus id, pulvinar massa."
-       />
+require('./_style.scss');
 
-       <Article
-         title="This is an article"
-         image={{ src: 'http://placehold.it/300x200', alt: 'Placehold' }}
-         content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id nulla cursus,
-        hendrerit lectus id, pulvinar massa."
-       />
+const Home = props => (
+  <div>
+    <Title text="Basic React App" />
+    <Title text="Example of an atomic Blog" />
+    <Article
+      title="This is an article"
+      image={{ src: 'http://placehold.it/300x200', alt: 'Placehold' }}
+      content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id nulla cursus,
+      hendrerit lectus id, pulvinar massa."
+    />
 
-       <hr />
+    <Article
+      title="This is an article"
+      image={{ src: 'http://placehold.it/300x200', alt: 'Placehold' }}
+      content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id nulla cursus,
+      hendrerit lectus id, pulvinar massa."
+    />
 
-       <Title text="Example of an Atomic Form" />
-       <Form fields={props.form} buttonText="Submit" />
-     </div>
-  )
-;
+    <hr />
+    <Title text="Example of an Atomic Form" />
+    <Form fields={props.form} buttonText="Submit" />
+  </div>
+);
 
 Home.propTypes = {
   form: React.PropTypes.array,

@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Paragraph = props =>
-   (
-     <p className="a__paragraph">{props.text}</p>
-  )
-;
+require('./_style.scss');
+
+const Paragraph = props => (
+  <p className="a__paragraph">{props.text}</p>
+);
 
 Paragraph.propTypes = {
   text: React.PropTypes.string.isRequired,

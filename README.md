@@ -8,6 +8,9 @@ This base project allows you to have a basic React App folder structure followin
 It contain some basic components that you can use. All the components are not (or minimally) stylized. The main objective
 of this project is to have a basic structure, that is the reason we are not doing complex styles and/or adding many libs.
 
+Also, each component is a JSX file and a .scss file that is associated to the component. This means, all the 
+components for this project should be modular, to make it easy its usage between different apps.
+
 ## Tools
 
 Using these package, you will be able to start a new fresh React project with the basic folder and file structures.
@@ -17,17 +20,19 @@ web server in your machine that automatically updates the code and the styles wh
 
 ## Features
 
-* ES6 to JS Transpile
-* SASS to CSS
-* React Router	
+* Webpack
+* ES6
+* SASS
+* React Router
 * Auto watcher for JS and SCSS files
 * Atomic design project structure
-* Launch server that updates itself every time we change a file with browsersync
+* Launch server with hot-reload using webpack
 * JS Lint ( extending airbnb eslint styles )
 * Styleint
 
 ## TODO List
 * Tests
+* Upgrade to Webpack 2.^ once stable
 
 ## Requirements
 * nodejs v5.*
@@ -45,11 +50,6 @@ Clone this repo (Be sure you delete the .git file, or move the files to your own
 git clone -b master --single-branch --depth 1 git@github.com:Rulox/react-atomic-structure.git
 ```
 
-##### Install Gulp globally
-```bash
-npm install -g gulp
-```
-
 ##### Install npm dependencies
 ```bash
 npm install
@@ -59,13 +59,12 @@ npm install
 ```bash
 npm run start
 ```
-A browser window should open, if not, open it manually and go to http://localhost:3000/ (or any other URL+PORT that your terminal says). You can start working right now in the code, and all the changes will be visible in the browser just opened.
+A browser webpack server should be ready on  http://localhost:8080/ (or any other URL+PORT that your terminal says). You can start working right now in the code, and all the changes will be visible in the browser just opened.
 
 ## Predefined components
 But first, [What is Atomic Design?](http://bradfrost.com/blog/post/atomic-web-design/)
 
-These components are just an idea on how to develop your application following the Atomic Design. Feel free to upgrade/delete
-them in order to do your own app!
+These components are just an idea on how to develop your application following the Atomic Design. Feel free to upgrade/delete them in order to do your own app!
 
 #### Atoms (stateless component)
 * Anchor
@@ -94,9 +93,7 @@ them in order to do your own app!
 To create a new component, just create a new folder in the atoms/molecules/organisms/templates folder with the
 name of your component.
 
-Create now the React component in the js file. Also create your .scss file and remember to import it in the _style.scss
-of the parent folder (For example, if you're creating a new atom called Checkbox, you should have `atoms/Checkbox/_style.scss`. So in
-the main style file for atoms `atoms/_style.scss` just import your new scss file so it can be imported.
+Create now the React component in the jsx file. Also create your .scss file and remember to import it in the component jsx file using `require`.
 
 ## NPM Scripts
 This project comes with the following scripts to help you.
@@ -105,33 +102,18 @@ This project comes with the following scripts to help you.
 npm run start
 ```
 1. Create CSS and JS bundles from Sass and JS.
-2. Launch a browsersync web server and open default browser.
+2. Launch a web server.
 3. Launch watchers on JS/CSS files.
 
 ```bash
-npm run build-dev
+npm run build
 ```
-1. Build CSS and JS from sources but does not start browsersync server.
+1. Build CSS and JS files.
 
 ```bash
-npm run build-prod
-```
-1. Build CSS and JS minified and ready for production but does not start browsersync server.
-
-```bash
-npm run start-server
-```
-1. Run the server serving the `/public` folder using browsersync.
-
-```bash
-npm run js-lint
+npm run lint
 ```
 1. Launch JS Lint checker.
-
-```bash
-npm run sass-lint
-```
-1. Launch SASS Lint checker. 
 
 ## Contributions
 Feel free to create a pull request or create an issue to add features or fix bugs.
