@@ -2,6 +2,8 @@ import React from 'react';
 import LabeledInput from '../../molecules/LabeledInput/LabeledInput';
 import Button from '../../atoms/Button/Button';
 
+require('./_style.scss');
+
 const Form = props => (
   <form className="o__form">
     {

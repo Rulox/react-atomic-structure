@@ -3,6 +3,8 @@ import Title from '../../atoms/Title/Title';
 import Article from '../../organisms/Article/Article';
 import Form from '../../organisms/Form/Form';
 
+require('./_style.scss');
+
 const Home = props => (
   <div>
     <Title text="Basic React App" />

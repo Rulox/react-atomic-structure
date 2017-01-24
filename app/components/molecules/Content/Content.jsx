@@ -2,6 +2,8 @@ import React from 'react';
 import Title from '../../atoms/Title/Title';
 import Paragraph from '../../atoms/Paragraph/Paragraph';
 
+require('./_style.scss');
+
 const Content = props => (
   <div className="m__content">
     <Title text={props.title} />

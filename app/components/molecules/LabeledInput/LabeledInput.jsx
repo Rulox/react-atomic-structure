@@ -2,6 +2,8 @@ import React from 'react';
 import Label from '../../atoms/Label/Label';
 import Input from '../../atoms/Input/Input';
 
+require('./_style.scss');
+
 const LabeledInput = props => (
   <div className="m__labeled_input">
     <Label text={props.label} />

@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router';
 
+require('./_style.scss');
+
 const Nav = () =>
 (
   <nav className="o__nav">

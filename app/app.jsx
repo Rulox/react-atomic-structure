@@ -7,8 +7,7 @@ import Home from './components/templates/Home/Home';
 import Main from './components/templates/Main/Main';
 import About from './components/templates/About/About';
 
-// Stylesheets
-require('./main.scss');
+require('./_style.scss');
 
 const App = () => (
   <Router history={browserHistory}>

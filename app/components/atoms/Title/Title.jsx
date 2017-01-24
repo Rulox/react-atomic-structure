@@ -1,5 +1,7 @@
 import React from 'react';
 
+require('./_style.scss');
+
 const Title = props => (
   <h1 className="a__title">{props.text}</h1>
 );
