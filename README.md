@@ -108,7 +108,7 @@ npm run start
 ```bash
 npm run build
 ```
-1. Build CSS and JS files.
+1. Build CSS and JS files. With this command, the js will be minified, the bundle version will be used in the html.
 
 ```bash
 npm run lint

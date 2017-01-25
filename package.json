@@ -4,8 +4,7 @@
   "description": "Basic Structure for React app following Atomic Design",
   "scripts": {
     "start": "webpack-dev-server --inline --hot --progress --colors",
-    "build2": "webpack -p",
-    "build": "webpack -p --config ./webpack-production.config.js --progress --colors",
+    "build": "webpack --config ./webpack-production.config.js --progress --colors",
     "lint": "eslint ./app/ --ext .js --ext .jsx --fix",
     "watch": "webpack --watch --progress",
     "clean": "rm -rf dist && npm cache clean"
@@ -27,7 +26,6 @@
   },
   "homepage": "https://github.com/Rulox/react-atomic-structure#readme",
   "dependencies": {
-    "gulp": "^3.9.1",
     "react": "^15.3.1",
     "react-dom": "^15.3.1",
     "react-router": "^2.8.1",
