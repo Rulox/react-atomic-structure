@@ -4,9 +4,5 @@ npm-debug.log
 .webpack.config.js.swp
 .eslintcache
 
-# Dest assets folders
-public/css
-public/js
-
 # Build folder
 dist/
