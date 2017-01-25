@@ -1,9 +1,9 @@
 {
-  "extends": "eslint-config-airbnb",
-  "env": {
-    "browser": true
-  },
+  "extends": "airbnb",
+  parser: "babel-eslint",
   "rules": {
+    "react/prop-types": [2],
+    "no-unused-vars": 0,
     "react/no-multi-comp": 0,
     "import/default": 0,
     "import/no-duplicates": 0,
@@ -19,14 +19,14 @@
     "react/jsx-filename-extension": 0,
     "arrow-body-style": 0,
     "react/jsx-space-before-closing": 0,
+    "no-undef": 0, # Should look into this one #
     "eol-last": 0,
     "max-len": ["error", 120],
     "react/forbid-prop-types": 0,
     "object-curly-spacing": 0
   },
   "plugins": [ "react" ],
-  "settings": {
-    "import/parser": "babel-eslint",
+  "settings": {  
     "import/resolve": {
       "moduleDirectory": ["node_modules", "src"]
     }

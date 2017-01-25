@@ -3,12 +3,11 @@
   "version": "1.0.0",
   "description": "Basic Structure for React app following Atomic Design",
   "scripts": {
-    "start": "gulp",
-    "start-server": "gulp start",
-    "build-dev": "gulp js && gulp sass",
-    "build-prod": "gulp production",
-    "js-lint": "gulp jslint",
-    "sass-lint": "gulp stylelint"
+    "start": "webpack-dev-server --inline --hot --progress --colors",
+    "build": "webpack --config ./webpack-production.config.js --progress --colors",
+    "lint": "eslint ./app/ --ext .js --ext .jsx --fix",
+    "watch": "webpack --watch --progress",
+    "clean": "rm -rf dist && npm cache clean"
   },
   "repository": {
     "type": "git",
@@ -27,32 +26,33 @@
   },
   "homepage": "https://github.com/Rulox/react-atomic-structure#readme",
   "dependencies": {
-    "gulp": "^3.9.1",
     "react": "^15.3.1",
     "react-dom": "^15.3.1",
-    "react-router": "^2.8.1"
+    "react-router": "^2.8.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "webpack-uglify-js-plugin": "^1.1.9",
+    "stylelint-webpack-plugin": "^0.4.0",
+    "html-webpack-plugin": "^2.24.1"
   },
   "devDependencies": {
+    "babel-core": "^6.18.2",
+    "babel-eslint": "^7.1.0",
+    "babel-loader": "^6.2.7",
     "babel-preset-es2015": "^6.14.0",
-    "babel-preset-react": "^6.11.1",
+    "babel-preset-react": "^6.16.0",
     "babel-preset-stage-0": "^6.5.0",
-    "babelify": "^7.3.0",
-    "browser-sync": "^2.14.0",
-    "browserify": "^13.1.0",
-    "eslint-config-airbnb": "^11.1.0",
-    "eslint-plugin-import": "^1.15.0",
-    "eslint-plugin-jsx-a11y": "^2.2.2",
-    "eslint-plugin-react": "^6.3.0",
-    "gulp-autoprefixer": "^3.1.1",
-    "gulp-clean-css": "^2.0.12",
-    "gulp-concat": "^2.6.0",
-    "gulp-eslint": "^3.0.1",
-    "gulp-notify": "^2.2.0",
-    "gulp-sass": "^2.3.2",
-    "gulp-sourcemaps": "^1.6.0",
-    "gulp-stylelint": "^3.2.0",
-    "gulp-uglify": "^2.0.0",
-    "vinyl-buffer": "^1.0.0",
-    "vinyl-source-stream": "^1.1.0"
+    "css-loader": "^0.25.0",
+    "eslint": "^3.9.1",
+    "eslint-config-airbnb": "^13.0.0",
+    "eslint-loader": "^1.6.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.6.0",
+    "node-sass": "^3.11.2",
+    "react-hot-loader": "^3.0.0-beta.6",
+    "sass-loader": "^4.0.2",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.3",
+    "webpack-dev-server": "^1.16.2"
   }
 }
