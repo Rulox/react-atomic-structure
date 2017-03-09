@@ -17,6 +17,9 @@
     "react",
     "atomic",
     "design",
+    "atomic design",
+    "es6",
+    "webpack",
     "sass"
   ],
   "author": "Raul Marrero (https://github.com/Rulox/)",
