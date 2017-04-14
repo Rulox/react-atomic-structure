@@ -4,8 +4,9 @@
   "description": "Basic Structure for React app following Atomic Design",
   "scripts": {
     "start": "webpack-dev-server --inline --hot --progress --colors",
+    "prebuild": "npm run clean",
     "build": "webpack --config ./webpack-production.config.js --progress --colors",
-    "lint": "eslint ./app/ --ext .js --ext .jsx --fix",
+    "lint":  "eslint ./app/ --ext .js --ext .jsx --fix",
     "watch": "webpack --watch --progress",
     "clean": "rm -rf dist && npm cache clean"
   },
