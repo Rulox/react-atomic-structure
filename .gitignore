@@ -2,6 +2,7 @@
 node_modules
 npm-debug.log
 .webpack.config.js.swp
+.package.json.swp
 .eslintcache
 
 # Build folder

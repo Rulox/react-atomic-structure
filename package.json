@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "Basic Structure for React app following Atomic Design",
   "scripts": {
-    "dev": "",
     "start": "webpack-dev-server --inline --hot --progress --colors",
     "build": "webpack --config ./webpack.prod.config.js --progress --colors",
     "lint": "eslint ./app/ --ext .js --ext .jsx --fix",
