@@ -1,6 +1,8 @@
-import React from 'react';
-import Label from '../../atoms/Label/Label';
-import Input from '../../atoms/Input/Input';
+import React      from 'react';
+import PropTypes  from 'prop-types';
+
+import Label      from '../../atoms/Label/Label';
+import Input      from '../../atoms/Input/Input';
 
 require('./_style.scss');
 
@@ -12,8 +14,8 @@ const LabeledInput = props => (
 );
 
 LabeledInput.propTypes = {
-  label: React.PropTypes.string.isRequired,
-  placeholder: React.PropTypes.string,
+  label: PropTypes.string.isRequired,
+  placeholder: PropTypes.string,
 };
 
 export default LabeledInput;
