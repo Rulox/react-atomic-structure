@@ -1,46 +1,52 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-      // ExtractTextPlugin = require('extract-text-webpack-plugin');
-      // StyleLintPlugin   = require('stylelint-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin'),
+      StyleLintPlugin   = require('stylelint-webpack-plugin');
 
 const path              = require('path'),
       webpack           = require('webpack');
 
 // Plugins
-// const StyleLintPluginConfig = new StyleLintPlugin({
-//   configFile: '.stylelintrc',
-//   files: [
-//     'app/*.s?(a|c)ss',
-//     'app/components/*/*.s?(a|c)ss',
-//     'app/components/*/*/*.s?(a|c)ss'
-//   ],
-//   failOnError: false,
-//   quiet: false,
-// });
+const StyleLintPluginConfig = new StyleLintPlugin({
+  configFile: '.stylelintrc',
+  files: [
+    'app/*.s?(a|c)ss',
+    'app/components/*/*.s?(a|c)ss',
+    'app/components/*/*/*.s?(a|c)ss'
+  ],
+  failOnError: false,
+  quiet: false,
+});
 const HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
   template: path.join(__dirname, "/public/index.html"),
   filename: 'index.html',
 });
 
 // Rules
-const reactRules = {
-
-};
 const jsRules = {
   test: /\.(js|jsx)$/,
   use: 'babel-loader',
   exclude: /node_modules/
 };
+const fileRules = {
+  test: /\.(png|jpg|gif|svg|otf|eot|ttf|woff)$/,
+  loader: 'file-loader',
+  options: {
+    publicPath: "./",
+    outputPath: './assets/'
+  }
+};
+
 
 module.exports = {
   entry: './app/app.jsx',
   module: {
     rules: [
-      jsRules
+      jsRules,
+      fileRules,
     ]
   },
   plugins: [
     HTMLWebpackPluginConfig,
-    // StyleLintPluginConfig
+    StyleLintPluginConfig
   ],
   // eslint: {
   //   configFile: './.eslintrc',

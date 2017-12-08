@@ -17,7 +17,7 @@ const postcssRules = {
   loader: 'postcss-loader',
   options: {
     config: {
-      path: './client/assets/css/postcss.config.js'
+      path: './app/postcss.config.js'
     }
   }
 };
@@ -38,11 +38,16 @@ module.exports = merge(BASE_CONFIG, {
     publicPath: '/',
   },
   devtool: 'source-map',
-  devserver: {
+  devServer: {
     contentBase: path.resolve(__dirname, "dist"),
     historyApiFallback: true,
     progress: true,
     noInfo: true,
     port: 3200
+  },
+  module: {
+    rules: [
+      cssRules
+    ]
   },
 });
