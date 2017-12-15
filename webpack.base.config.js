@@ -34,12 +34,22 @@ const fileRules = {
     outputPath: './assets/'
   }
 };
-
+const eslintRules = {
+  enforce: "pre",
+  test: /\.(js|jsx)$/,
+  exclude: /node_modules/,
+  loader: "eslint-loader",
+  options: {
+    emitError: true,
+    failOnError: true
+  }
+};
 
 module.exports = {
   entry: './app/app.jsx',
   module: {
     rules: [
+      eslintRules,
       jsRules,
       fileRules,
     ]
@@ -48,10 +58,6 @@ module.exports = {
     HTMLWebpackPluginConfig,
     StyleLintPluginConfig
   ],
-  // eslint: {
-  //   configFile: './.eslintrc',
-  //   failOnError: true
-  // },
   resolve: {
     extensions: ['.js', '.jsx'],
     alias: { '@': path.join(__dirname) }
