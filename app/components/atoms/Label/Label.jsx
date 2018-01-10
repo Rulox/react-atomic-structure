@@ -1,4 +1,5 @@
-import React from 'react';
+import React      from 'react';
+import PropTypes  from 'prop-types';
 
 require('./_style.scss');
 
@@ -7,7 +8,7 @@ const Label = props => (
 );
 
 Label.propTypes = {
-  text: React.PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
 };
 
 export default Label;

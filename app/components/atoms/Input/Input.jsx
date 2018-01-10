@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes  from 'prop-types';
 
 require('./_style.scss');
 
@@ -7,9 +8,9 @@ const Input = props => (
 );
 
 Input.propTypes = {
-  text: React.PropTypes.string,
-  type: React.PropTypes.string,
-  placeholder: React.PropTypes.string,
+  text: PropTypes.string,
+  type: PropTypes.string,
+  placeholder: PropTypes.string,
 };
 
 export default Input;

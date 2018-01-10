@@ -1,5 +1,6 @@
 {
-  "extends": "airbnb",
+  "extends": [ "airbnb-base" ],
+  "plugins": [ "react" ],
   parser: "babel-eslint",
   "rules": {
     "react/prop-types": [2],
@@ -11,10 +12,12 @@
     "import/namespace": 0,
     "import/no-unresolved": 0,
     "import/no-named-as-default": 2,
+    "import/extensions": ["off", "never"],
     "comma-dangle": 0,  // not sure why airbnb turned this on. gross!
     "indent": [2, 2, {"SwitchCase": 1}],
     "no-console": 0,
     "no-alert": 0,
+    "no-multi-spaces": ["error", { exceptions: { "ImportDeclaration": true} }], // For import spacing
     "linebreak-style": 0,
     "react/jsx-filename-extension": 0,
     "arrow-body-style": 0,
@@ -25,7 +28,6 @@
     "react/forbid-prop-types": 0,
     "object-curly-spacing": 0
   },
-  "plugins": [ "react" ],
   "settings": {  
     "import/resolve": {
       "moduleDirectory": ["node_modules", "src"]

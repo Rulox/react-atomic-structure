@@ -7,3 +7,4 @@ npm-debug.log
 
 # Build folder
 dist/
+build/

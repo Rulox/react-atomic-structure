@@ -1,6 +1,8 @@
-import React from 'react';
-import Title from '../../atoms/Title/Title';
-import Paragraph from '../../atoms/Paragraph/Paragraph';
+import React      from 'react';
+import PropTypes  from 'prop-types';
+
+import Title      from '../../atoms/Title/Title';
+import Paragraph  from '../../atoms/Paragraph/Paragraph';
 
 require('./_style.scss');
 
@@ -12,8 +14,8 @@ const Content = props => (
 );
 
 Content.propTypes = {
-  title: React.PropTypes.string,
-  text: React.PropTypes.string,
+  title: PropTypes.string,
+  text: PropTypes.string,
 };
 
 export default Content;

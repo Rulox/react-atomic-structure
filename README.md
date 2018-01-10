@@ -32,7 +32,7 @@ web server in your machine that automatically updates the code and the styles wh
 
 ## TODO List
 * Tests
-* Upgrade to Webpack 2.^ once stable
+~~* Upgrade to Webpack 2.^ once stable
 
 ## Requirements
 * nodejs v5.*

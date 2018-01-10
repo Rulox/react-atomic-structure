@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes  from 'prop-types';
+
 import Content from '../../molecules/Content/Content';
 
 require('./_style.scss');
@@ -11,9 +13,9 @@ const Article = props => (
 );
 
 Article.propTypes = {
-  image: React.PropTypes.object,
-  title: React.PropTypes.string.isRequired,
-  content: React.PropTypes.string,
+  image: PropTypes.object,
+  title: PropTypes.string.isRequired,
+  content: PropTypes.string,
 };
 
 export default Article;

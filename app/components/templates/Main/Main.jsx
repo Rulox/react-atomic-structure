@@ -1,4 +1,5 @@
-import React from 'react';
+import React      from 'react';
+import PropTypes  from 'prop-types';
 
 import Nav from '../../organisms/Nav/Nav';
 
@@ -10,7 +11,7 @@ const Main = props => (
 );
 
 Main.propTypes = {
-  children: React.PropTypes.node,
+  children: PropTypes.node,
 };
 
 export default Main;
