@@ -1,8 +1,7 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin'),
-      StyleLintPlugin   = require('stylelint-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const StyleLintPlugin = require('stylelint-webpack-plugin');
 
-const path              = require('path'),
-      webpack           = require('webpack');
+const path = require('path');
 
 // Plugins
 const StyleLintPluginConfig = new StyleLintPlugin({
@@ -16,7 +15,7 @@ const StyleLintPluginConfig = new StyleLintPlugin({
   quiet: false,
 });
 const HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
-  template: path.join(__dirname, "/public/index.html"),
+  template: path.join(__dirname, '/public/index.html'),
   filename: 'index.html',
 });
 
@@ -30,18 +29,8 @@ const fileRules = {
   test: /\.(png|jpg|gif|svg|otf|eot|ttf|woff)$/,
   loader: 'file-loader',
   options: {
-    publicPath: "./",
+    publicPath: './',
     outputPath: './assets/'
-  }
-};
-const eslintRules = {
-  enforce: "pre",
-  test: /\.(js|jsx)$/,
-  exclude: /node_modules/,
-  loader: "eslint-loader",
-  options: {
-    emitError: true,
-    failOnError: true
   }
 };
 
@@ -49,7 +38,6 @@ module.exports = {
   entry: './app/app.jsx',
   module: {
     rules: [
-      eslintRules,
       jsRules,
       fileRules,
     ]

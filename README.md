@@ -5,7 +5,7 @@
 Basic Structure for React app following Atomic Design.
 
 This base project allows you to have a basic React App folder structure following the principles of [Atomic Design](http://bradfrost.com/blog/post/atomic-web-design/).
-It contain some basic components that you can use. All the components are not (or minimally) stylized. The main objective
+It contains some basic components that you can use. All the components are not (or minimally) stylized. The main objective
 of this project is to have a basic structure, that is the reason we are not doing complex styles and/or adding many libs.
 
 Also, each component is a JSX file and a .scss file that is associated to the component. This means, all the 
@@ -20,7 +20,7 @@ web server in your machine that automatically updates the code and the styles wh
 
 ## Features
 
-* Webpack
+* Webpack 3
 * ES6
 * SASS
 * React Router
@@ -32,11 +32,10 @@ web server in your machine that automatically updates the code and the styles wh
 
 ## TODO List
 * Tests
-~~* Upgrade to Webpack 2.^ once stable
 
 ## Requirements
-* nodejs v5.*
-* npm v3.*
+* nodejs >= v8.*
+* npm >= v4.*
 
 
 ## Getting started
@@ -55,11 +54,11 @@ git clone -b master --single-branch --depth 1 git@github.com:Rulox/react-atomic-
 npm install
 ```
 
-##### Run the server
+##### Run the server 
 ```bash
 npm run start
 ```
-A browser webpack server should be ready on  http://localhost:8080/ (or any other URL+PORT that your terminal says). You can start working right now in the code, and all the changes will be visible in the browser just opened.
+A browser webpack server should be ready on  http://localhost:3200/ (or any other URL+PORT that your terminal says). You can start working right now in the code, and all the changes will be visible in the browser just opened.
 
 ## Predefined components
 But first, [What is Atomic Design?](http://bradfrost.com/blog/post/atomic-web-design/)
@@ -99,11 +98,17 @@ Create now the React component in the jsx file. Also create your .scss file and 
 This project comes with the following scripts to help you.
 
 ```bash
-npm run start
+npm run watch
 ```
 1. Create CSS and JS bundles from Sass and JS.
 2. Launch a web server.
 3. Launch watchers on JS/CSS files.
+
+```bash
+npm run start
+```
+1. Create CSS and JS bundles from Sass and JS.
+2. Launch a web server.
 
 ```bash
 npm run build
@@ -113,7 +118,7 @@ npm run build
 ```bash
 npm run lint
 ```
-1. Launch JS Lint checker.
+1. Launch Lint checkers.
 
 ## Contributions
 Feel free to create a pull request or create an issue to add features or fix bugs.
