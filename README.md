@@ -100,6 +100,8 @@ This project comes with the following scripts to help you.
 ```bash
 npm run watch
 ```
+This is the preferred method during development
+
 1. Create CSS and JS bundles from Sass and JS.
 2. Launch a web server.
 3. Launch watchers on JS/CSS files.
