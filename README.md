@@ -1,6 +1,6 @@
 # React Atomic Structure
-[![Build Status](https://travis-ci.org/Rulox/react-atomic-structure.svg?branch=master)](https://travis-ci.org/Rulox/react-atomic-structure) 
-
+[![Build Status](https://travis-ci.org/Rulox/react-atomic-structure.svg?branch=master)](https://travis-ci.org/Rulox/react-atomic-structure)
+[![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=Rulox_react-atomic-structure&metric=alert_status)](https://sonarcloud.io/dashboard?id=Rulox_react-atomic-structure)
 
 
 Basic Structure for React app following Atomic Design.
