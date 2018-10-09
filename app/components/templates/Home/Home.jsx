@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import Title from '../../atoms/Title/Title';
 import Article from '../../organisms/Article/Article';
 import Form from '../../organisms/Form/Form';
@@ -30,7 +32,7 @@ const Home = props => (
 );
 
 Home.propTypes = {
-  form: React.PropTypes.array,
+  form: PropTypes.array,
 };
 
 Home.defaultProps = {

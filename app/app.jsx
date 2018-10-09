@@ -1,21 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Router, Route, IndexRoute, browserHistory } from 'react-router';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-// Components
 import Home from './components/templates/Home/Home';
-import Main from './components/templates/Main/Main';
+import Nav from './components/organisms/Nav/Nav';
 import About from './components/templates/About/About';
 
 require('./_style.scss');
 
 const App = () => (
-  <Router history={browserHistory}>
-    <Route path="/" component={Main}>
-      <IndexRoute component={Home} />
-      <Route path="/about" component={About} />
-    </Route>
-  </Router>
+  <BrowserRouter>
+    <div>
+      <Nav />
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/about" component={About} />
+      </Switch>
+    </div>
+  </BrowserRouter>
 );
 
 if (typeof window !== 'undefined') {
