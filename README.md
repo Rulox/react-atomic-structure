@@ -1,5 +1,6 @@
 # React Atomic Structure
-[![Build Status](https://travis-ci.org/Rulox/react-atomic-structure.svg?branch=master)](https://travis-ci.org/Rulox/react-atomic-structure) [![Dependency Status](https://gemnasium.com/badges/github.com/Rulox/react-atomic-structure.svg)](https://gemnasium.com/github.com/Rulox/react-atomic-structure)
+[![Build Status](https://travis-ci.org/Rulox/react-atomic-structure.svg?branch=master)](https://travis-ci.org/Rulox/react-atomic-structure) 
+
 
 
 Basic Structure for React app following Atomic Design.
@@ -15,8 +16,7 @@ components for this project should be modular, to make it easy its usage between
 
 Using these package, you will be able to start a new fresh React project with the basic folder and file structures.
 
-This project uses ES6 in the JS side, and Sass for styles. It also uses BrowserSync, a tool that will create a
-web server in your machine that automatically updates the code and the styles whenever the watcher detects a change.
+This project uses ES6 in the JS side, and Sass for styles. 
 
 ## Features
 

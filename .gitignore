@@ -4,6 +4,8 @@ npm-debug.log
 .webpack.config.js.swp
 .package.json.swp
 .eslintcache
+.scannerwork
+package-lock.json
 
 # Build folder
 dist/
